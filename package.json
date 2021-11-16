@@ -1,0 +1,17 @@
+{
+  "name": "craftingSub",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node http://128.199.110.144:8020 --ipfs http://128.199.110.144:5001 craftingSub",
+    "create-server": "graph create --node http://128.199.110.144:8020/ craftingSub",
+    "create-local": "graph create --node http://localhost:8020/ craftingSub",
+    "remove-local": "graph remove --node http://localhost:8020/ craftingSub",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 craftingSub"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.23.2",
+    "@graphprotocol/graph-ts": "0.23.1"
+  }
+}

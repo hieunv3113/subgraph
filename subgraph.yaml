@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: KawaiiCrafting
+    network: mainnet
+    source:
+      address: "0xb07372813aF255e35531811C767D23F4fb939a09"
+      abi: KawaiiCrafting
+      startBlock: 12063106
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Crafting
+      abis:
+        - name: KawaiiCrafting
+          file: ./abis/KawaiiCrafting.json
+      eventHandlers:
+        - event: Crafting(indexed address,uint256)
+          handler: handleCrafting
+      file: ./src/mapping.ts

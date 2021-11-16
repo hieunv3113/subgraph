@@ -1,0 +1,25 @@
+type Crafting @entity {
+  id: ID!
+  sender: Bytes! # address
+  nftId: BigInt! # uint256
+}
+
+type Fee @entity {
+  id: ID!
+  min: BigInt! # uint256
+  max: BigInt! # uint256
+}
+
+type OwnershipTransferred @entity {
+  id: ID!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Pause @entity {
+  id: ID!
+}
+
+type Unpause @entity {
+  id: ID!
+}
